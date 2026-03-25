@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Saúde Ideal - Descubra o perfil da sua empresa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>HealthCorp Solutions</span>
+            </div>
+            <div class="progress-container hidden" id="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">Passo 1 de 7</span>
+            </div>
+        </header>
+
+        <form id="quiz-form" onsubmit="return false;">
+            
+            <!-- STEP 0: PRE-QUIZ -->
+            <section class="step active" id="step-0">
+                <div class="hero-content">
+                    <h1>Descubra o Plano de Saúde Ideal para Sua Empresa!</h1>
+                    <p class="subtitle">Responda a algumas perguntas rápidas e receba uma análise personalizada para encontrar o plano de saúde empresarial que melhor se adapta às necessidades da sua equipe.</p>
+                    
+                    <div class="benefits-boxes">
+                        <div class="benefit">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Rápido e Fácil</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span>Diagnóstico Preciso</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fa-solid fa-gift"></i>
+                            <span>100% Gratuito</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card form-card">
+                    <h3>Dados da Empresa</h3>
+                    <p class="form-instruction">Preencha os dados abaixo para iniciar sua jornada. Tempo estimado: 2 minutos.</p>
+                    
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="fullName">Nome Completo</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com.br">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="phone">Telefone de Contato</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="input-field">
+                            <label>Tipo de CNPJ</label>
+                            <div class="custom-select" id="cnpjTypeSelect">
+                                <select id="cnpjType" name="cnpjType" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="MEI">MEI</option>
+                                    <option value="LTDA">LTDA</option>
+                                    <option value="EIRELI">EIRELI</option>
+                                    <option value="ME">ME</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Região(ões) de Atendimento</label>
+                        <p class="field-hint">Selecione uma ou mais regiões</p>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Rio de Janeiro"> <span>Rio de Janeiro</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Niterói"> <span>Niterói</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="São Gonçalo"> <span>São Gonçalo</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Duque de Caxias"> <span>Duque de Caxias</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Nova Iguaçu"> <span>Nova Iguaçu</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Belford Roxo"> <span>Belford Roxo</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="São João de Meriti"> <span>São João de Meriti</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Nilópolis"> <span>Nilópolis</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Mesquita"> <span>Mesquita</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Itaguaí"> <span>Itaguaí</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Seropédica"> <span>Seropédica</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Japeri"> <span>Japeri</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Queimados"> <span>Queimados</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Magé"> <span>Magé</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Guapimirim"> <span>Guapimirim</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Itaboraí"> <span>Itaboraí</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Tanguá"> <span>Tanguá</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Rio Bonito"> <span>Rio Bonito</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Cachoeiras de Macacu"> <span>Cachoeiras de Macacu</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Maricá"> <span>Maricá</span></label>
+                            <label class="checkbox-label"><input type="checkbox" name="regions" value="Paracambi"> <span>Paracambi</span></label>
+                            <label class="checkbox-label" id="region-other-label"><input type="checkbox" id="regionOtherCheck" name="regions" value="Outros"> <span>Outros</span></label>
+                        </div>
+                        <div class="hidden-field" id="regionOtherContainer">
+                            <input type="text" id="regionOtherText" placeholder="Especifique a região">
+                        </div>
+                    </div>
+
+                    <div class="actions center">
+                        <button type="button" class="btn btn-primary btn-large btn-glow" id="start-btn">
+                            Iniciar Quiz <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 1: QUANTIDADE DE VIDAS -->
+            <section class="step" id="step-1">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Tamanho da Equipe</h2>
+                        <p>Quantas vidas (colaboradores e dependentes) sua empresa deseja incluir no plano de saúde?</p>
+                    </div>
+                    
+                    <div class="radio-grid-large">
+                        <label class="radio-card">
+                            <input type="radio" name="livesCount" value="2" required>
+                            <div class="card-content">
+                                <i class="fa-solid fa-user"></i>
+                                <span>2 vidas</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="livesCount" value="3">
+                            <div class="card-content">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>3 vidas</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="livesCount" value="4">
+                            <div class="card-content">
+                                <i class="fa-solid fa-users"></i>
+                                <span>4 vidas</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="livesCount" value="5-7">
+                            <div class="card-content">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                                <span>5 a 7 vidas</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="livesCount" value="8-10">
+                            <div class="card-content">
+                                <i class="fa-solid fa-building-user"></i>
+                                <span>8 a 10 vidas</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="livesCount" value="11+">
+                            <div class="card-content">
+                                <i class="fa-solid fa-city"></i>
+                                <span>11+ vidas</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 2: PLANO ATUAL -->
+            <section class="step" id="step-2">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Plano Atual</h2>
+                        <p>Sua empresa já possui plano de saúde atualmente?</p>
+                    </div>
+
+                    <div class="radio-grid-large 2-cols">
+                        <label class="radio-card">
+                            <input type="radio" name="hasPlan" value="Sim" required id="hasPlanYes">
+                            <div class="card-content">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Sim, já possuímos</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="hasPlan" value="Não" id="hasPlanNo">
+                            <div class="card-content">
+                                <i class="fa-solid fa-xmark"></i>
+                                <span>Não possuímos</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="hidden-field mt-4" id="currentOperatorContainer">
+                        <h3>Qual é a operadora atual?</h3>
+                        <div class="radio-grid-large mt-2">
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Amil"><div class="card-content"><span>Amil</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="SulAmérica"><div class="card-content"><span>SulAmérica</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Porto"><div class="card-content"><span>Porto</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Klini"><div class="card-content"><span>Klini</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Leve Saúde"><div class="card-content"><span>Leve Saúde</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Bradesco"><div class="card-content"><span>Bradesco</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="MedSênior"><div class="card-content"><span>MedSênior</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Hapvida"><div class="card-content"><span>Hapvida</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Prevent Senior"><div class="card-content"><span>Prevent Senior</span></div></label>
+                            <label class="radio-card"><input type="radio" name="currentOperator" value="Outra"><div class="card-content"><span>Outra</span></div></label>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 3: FAIXA ETÁRIA -->
+            <section class="step" id="step-3">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Idade das Vidas</h2>
+                        <p>Para nos ajudar a personalizar a oferta, indique a quantidade de vidas por faixa etária.</p>
+                        <div id="lives-counter" class="status-badge mt-3" style="font-size: 1.1rem; padding: 10px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; font-weight: 500; text-align: center;">
+                            Vidas distribuídas: <span id="lives-distributed" style="color: var(--primary);">0</span> / <span id="lives-total-target" style="color: var(--text-muted);">-</span>
+                        </div>
+                    </div>
+
+                    <div class="number-grid">
+                        <div class="number-field">
+                            <label>0-18 anos</label>
+                            <input type="number" min="0" value="0" name="age_0_18">
+                        </div>
+                        <div class="number-field">
+                            <label>19-23 anos</label>
+                            <input type="number" min="0" value="0" name="age_19_23">
+                        </div>
+                        <div class="number-field">
+                            <label>24-28 anos</label>
+                            <input type="number" min="0" value="0" name="age_24_28">
+                        </div>
+                        <div class="number-field">
+                            <label>29-33 anos</label>
+                            <input type="number" min="0" value="0" name="age_29_33">
+                        </div>
+                        <div class="number-field">
+                            <label>34-38 anos</label>
+                            <input type="number" min="0" value="0" name="age_34_38">
+                        </div>
+                        <div class="number-field">
+                            <label>39-43 anos</label>
+                            <input type="number" min="0" value="0" name="age_39_43">
+                        </div>
+                        <div class="number-field">
+                            <label>44-48 anos</label>
+                            <input type="number" min="0" value="0" name="age_44_48">
+                        </div>
+                        <div class="number-field">
+                            <label>49-53 anos</label>
+                            <input type="number" min="0" value="0" name="age_49_53">
+                        </div>
+                        <div class="number-field">
+                            <label>54-58 anos</label>
+                            <input type="number" min="0" value="0" name="age_54_58">
+                        </div>
+                        <div class="number-field">
+                            <label>59+ anos</label>
+                            <input type="number" min="0" value="0" name="age_59_plus">
+                        </div>
+                    </div>
+                    
+                    <p class="field-hint error-msg hidden" id="ageError">Por favor, insira pelo menos uma vida.</p>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 4: OPERADORA DE PREFERÊNCIA -->
+            <section class="step" id="step-4">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Operadora de Preferência</h2>
+                        <p>Selecione a sua operadora de preferência (opcional).</p>
+                    </div>
+
+                    <div class="radio-grid-large">
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="Amil"><div class="card-content"><span>Amil</span></div></label>
+                        <label class="radio-card op-premium"><input type="radio" name="preferredOperator" value="SulAmérica"><div class="card-content"><span>SulAmérica</span></div></label>
+                        <label class="radio-card op-premium"><input type="radio" name="preferredOperator" value="Porto"><div class="card-content"><span>Porto</span></div></label>
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="Klini"><div class="card-content"><span>Klini</span></div></label>
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="Leve Saúde"><div class="card-content"><span>Leve Saúde</span></div></label>
+                        <label class="radio-card op-premium"><input type="radio" name="preferredOperator" value="Bradesco"><div class="card-content"><span>Bradesco</span></div></label>
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="MedSênior"><div class="card-content"><span>MedSênior</span></div></label>
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="Hapvida"><div class="card-content"><span>Hapvida</span></div></label>
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="Prevent Senior"><div class="card-content"><span>Prevent Senior</span></div></label>
+                        <label class="radio-card"><input type="radio" name="preferredOperator" value="Sem preferência" checked><div class="card-content"><span>Sem preferência</span></div></label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 5: COBERTURA -->
+            <section class="step" id="step-5">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Tipo de Cobertura</h2>
+                        <p>Qual tipo de cobertura médica é mais importante para sua empresa?</p>
+                    </div>
+
+                    <div class="radio-list">
+                        <label class="radio-list-item">
+                            <input type="radio" name="coverage" value="Ambulatorial e Hospitalar com Obstetrícia" required>
+                            <div class="list-content">
+                                <strong>Ambulatorial e Hospitalar com Obstetrícia</strong>
+                                <span>Consultas, exames, internações, cirurgias e partos. Completo.</span>
+                            </div>
+                        </label>
+                        <label class="radio-list-item">
+                            <input type="radio" name="coverage" value="Ambulatorial e Hospitalar sem Obstetrícia">
+                            <div class="list-content">
+                                <strong>Ambulatorial e Hospitalar sem Obstetrícia</strong>
+                                <span>Consultas, exames, internações e cirurgias (sem cobertura para parto).</span>
+                            </div>
+                        </label>
+                        <label class="radio-list-item">
+                            <input type="radio" name="coverage" value="Somente Ambulatorial">
+                            <div class="list-content">
+                                <strong>Somente Ambulatorial</strong>
+                                <span>Focado em consultas médicas e exames, sem internação.</span>
+                            </div>
+                        </label>
+                        <label class="radio-list-item">
+                            <input type="radio" name="coverage" value="Somente Hospitalar com Obstetrícia">
+                            <div class="list-content">
+                                <strong>Somente Hospitalar com Obstetrícia</strong>
+                                <span>Cobertura exclusivamente para internações, cirurgias e partos.</span>
+                            </div>
+                        </label>
+                        <label class="radio-list-item">
+                            <input type="radio" name="coverage" value="Somente Hospitalar sem Obstetrícia">
+                            <div class="list-content">
+                                <strong>Somente Hospitalar sem Obstetrícia</strong>
+                                <span>Exclusivo para internações e cirurgias.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="addon-section mt-4">
+                        <h3>Opcionais</h3>
+                        <label class="checkbox-card-large">
+                            <input type="checkbox" name="dentalAddon" value="Sim">
+                            <div class="card-content row-layout">
+                                <div class="icon-circle"><i class="fa-solid fa-tooth"></i></div>
+                                <div class="text">
+                                    <strong>Incluir Plano Odontológico</strong>
+                                    <span>Adicione saúde bucal para seus colaboradores.</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 6: ABRANGÊNCIA -->
+            <section class="step" id="step-6">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Abrangência Geográfica</h2>
+                        <p>Qual a área de cobertura desejada para o uso do plano?</p>
+                    </div>
+
+                    <div class="radio-grid-large 2-cols">
+                        <label class="radio-card">
+                            <input type="radio" name="area" value="Municipal" required>
+                            <div class="card-content">
+                                <i class="fa-solid fa-city"></i>
+                                <span>Municipal</span>
+                                <small>Atendimento restrito à sua cidade e região metropolitana</small>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="area" value="Estadual">
+                            <div class="card-content">
+                                <i class="fa-solid fa-map"></i>
+                                <span>Estadual</span>
+                                <small>Cobertura em todo o seu estado</small>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="area" value="Nacional">
+                            <div class="card-content">
+                                <i class="fa-solid fa-earth-americas"></i>
+                                <span>Nacional</span>
+                                <small>Para equipes distribuídas pelo Brasil e viagens</small>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="area" value="Internacional">
+                            <div class="card-content">
+                                <i class="fa-solid fa-plane"></i>
+                                <span>Internacional</span>
+                                <small>Adicional de assistência em viagens internacionais</small>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 7: ACOMODAÇÃO -->
+            <section class="step" id="step-7">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Tipo de Acomodação</h2>
+                        <p>Em caso de internação hospitalar, qual a preferência de acomodação?</p>
+                    </div>
+
+                    <div class="radio-grid-large 2-cols">
+                        <label class="radio-card">
+                            <input type="radio" name="accommodation" value="Enfermaria" required>
+                            <div class="card-content">
+                                <i class="fa-solid fa-bed"></i>
+                                <span>Enfermaria</span>
+                                <small>Quartos compartilhados (melhor custo-benefício)</small>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="accommodation" value="Apartamento">
+                            <div class="card-content">
+                                <i class="fa-solid fa-door-closed"></i>
+                                <span>Apartamento</span>
+                                <small>Quartos individuais com acompanhante (mais conforto e privacidade)</small>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-primary btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 8: PREFERÊNCIA DE REDE -->
+            <section class="step" id="step-8">
+                <div class="card slide-up">
+                    <div class="step-header">
+                        <h2>Rede Credenciada</h2>
+                        <p>Você tem alguma preferência por uma rede credenciada específica (hospitais, laboratórios, etc.)?</p>
+                    </div>
+
+                    <div class="radio-list">
+                        <label class="radio-list-item">
+                            <input type="radio" name="networkPref" value="Não" required id="networkNoRadio">
+                            <div class="list-content">
+                                <strong>Não, aceito sugestões</strong>
+                                <span>Quero ver as melhores opções do mercado para o meu perfil.</span>
+                            </div>
+                        </label>
+                        <label class="radio-list-item">
+                            <input type="radio" name="networkPref" value="Sim" id="networkYesRadio">
+                            <div class="list-content">
+                                <strong>Sim, tenho preferência</strong>
+                                <span>Hospitais ou laboratórios específicos.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="hidden-field mt-3" id="networkTextContainer">
+                        <label for="networkText">Por favor, especifique os hospitais e/ou laboratórios essenciais:</label>
+                        <textarea id="networkText" name="networkText" rows="3" placeholder="Ex: Hospital Sírio-Libanês, Albert Einstein, Laboratório Fleury..."></textarea>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary btn-prev"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <button type="button" class="btn btn-success btn-large btn-glow btn-next">
+                            Gerar Propostas <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 9: CARREGAMENTO -->
+            <section class="step" id="step-9">
+                <div class="card text-center slide-up" style="padding: 40px 20px;">
+                    <div class="loader-container">
+                        <div id="loading-logo" class="loading-logo mb-3" style="font-size: 3rem; color: var(--primary);">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
+                        <h2 id="loading-op-name" class="mb-3">Processando...</h2>
+                        <h3 class="mb-2">Gerando a melhor proposta para você</h3>
+                        <p class="text-muted mb-4">Analisando seu perfil e avaliando as regras de aceitação da seguradora...</p>
+                        
+                        <div class="progress-bar-container mt-4" style="background: rgba(var(--primary-rgb), 0.1); border-radius: 10px; height: 12px; overflow: hidden; position: relative; width: 100%; max-width: 400px; margin: 0 auto;">
+                            <div id="loading-bar-fill" style="background: var(--primary); width: 0%; height: 100%; transition: width 0.1s linear;"></div>
+                        </div>
+                        <p id="loading-percentage" class="mt-2" style="font-weight: bold; color: var(--primary); font-size: 1.2rem;">0%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RECAP & SUCCESS PAGE -->
+            <section class="step" id="step-success">
+                <div class="card text-center success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+                    <h2>Obrigado por completar o quiz!</h2>
+                    <p class="success-msg">Sua análise personalizada está sendo preparada. Em breve, um de nossos especialistas entrará em contato para apresentar as melhores opções de planos de saúde empresarial, totalmente alinhadas às necessidades da sua empresa e equipe.</p>
+                    
+                    <div class="recap-box" id="recap-content">
+                        <!-- Filled via JS -->
+                    </div>
+                    
+                    <p class="mt-4"><strong>Fique atento ao seu e-mail e telefone!</strong></p>
+
+                    <div class="actions justify-center mt-5">
+                        <button type="button" class="btn btn-secondary" onclick="location.reload()"><i class="fa-solid fa-rotate-right"></i> Voltar ao Início</button>
+                        <a href="#" class="btn btn-primary">Conheça Nossos Serviços</a>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+    </main>
+
+    <script src="app.js?v=7"></script>
+</body>
+</html>
